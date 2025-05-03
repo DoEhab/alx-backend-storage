@@ -1,6 +1,6 @@
 -- change valid email upon insert
 DROP PROCEDURE IF EXISTS `ComputeAverageScoreForUser`
-DELIMITER //
+DELIMITER |
 
 CREATE PROCEDURE ComputeAverageScoreForUser(IN in_user_id INT)
 BEGIN
@@ -15,6 +15,6 @@ SET average_score = IFNULL(avg_score, 0)
 WHERE id = in_user_id;
 
 END;
-//
+|
 
 DELIMITER ;
