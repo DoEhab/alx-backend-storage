@@ -14,7 +14,7 @@ BEGIN
 		weighted_sum, 
         total_weight
 	FROM
-		corrections c,
+		corrections c
         JOIN 
         projects p ON c.project_id = p.id
     WHERE 
