@@ -1,5 +1,5 @@
 -- stored procedure to add bonus
-DELIMITER //
+DELIMITER |
 
 CREATE PROCEDURE AddBonus(
     IN in_user_id INT,
@@ -18,5 +18,5 @@ BEGIN
     INSERT INTO corrections (user_id, project_id, score)
     VALUES (in_user_id, project_id, in_score);
 END;
-//
+|
 DELIMITER ;
