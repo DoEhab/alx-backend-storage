@@ -1,0 +1,4 @@
+// Create new DB
+use my_db
+db.my_collection.insertOne({ name: "example" })
+
