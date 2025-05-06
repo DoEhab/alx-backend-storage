@@ -1,0 +1,3 @@
+// new collection
+db.school.insert({name: "ALX"});
+
