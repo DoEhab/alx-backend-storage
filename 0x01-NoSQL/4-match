@@ -1,0 +1,3 @@
+// list all collections with name school
+db.school.find({name: "ALX"}).forEach(doc => printjson(doc));
+
