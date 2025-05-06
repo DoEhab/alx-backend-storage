@@ -1,0 +1,3 @@
+// list all collections
+db.school.find().forEach(doc => printjson(doc));
+
