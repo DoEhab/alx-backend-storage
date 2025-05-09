@@ -9,12 +9,12 @@ db = client.logs
 db_collection = db.nginx
 methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
-print(db_collection.count_documents({}))
+print(f"{db_collection.count_documents({})} logs")
+
 print("Methods:")
-
 for method in methods:
-    result = db_collection.count_documents({"method": method})
-    print(f"\tmethod {method}: {result}")
+    count = db_collection.count_documents({"method": method})
+    print(f"\tmethod {method}: {count}")
 
-result = db_collection.count_documents({"method": "GET", "path": "/status"})
-print(f"{result} status check")
+status_check = db_collection.count_documents({"method": "GET", "path": "/status"})
+print(f"{status_check} status check")
