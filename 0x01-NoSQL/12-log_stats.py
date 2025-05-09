@@ -4,7 +4,11 @@ script to print logs
 """
 from pymongo import MongoClient
 
-client = MongoClient("mongodb://localhost:27017/")
+"""
+connecting to mongo DB
+count logs method and status
+"""
+client = MongoClient('mongodb://127.0.0.1:27017')
 db = client.logs
 db_collection = db.nginx
 methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
